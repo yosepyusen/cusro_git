@@ -1,0 +1,71 @@
+---------------------SOBRE GIT COMANDOS ------------------------
+//abrimos GIT BASH HERE en la carpeta donde queemos hacer respaldo
+git init  //para q inicialice y crea carpeta
+git status //para ver como esta 
+git status -s // mas especifico que muestra las carpetas y archivos de momentos en la carpeta del proyecto, cuando aparece ?, esntonces no hay seguimiento de estos files
+// es decir no se ha creado copias de respaldo ejem: ?? css/
+
+git add .   //para agregar todo, con vs podemos ir al tecer icono para para darle commit a todo o solo un archivo no mas
+            //sigo menos en vs es quitar del respaldo de GIT, 
+            //donde dice boton COMMIT: para darle respaldo a todos archivos y guardarlo en ensayo
+git add index.html //agregamos el archivo con el nomre mas su extencion si html...
+            //A  index.html : este archivo esta en el area de ensayo, lo esta monitoreando o haciendo el seguimiento
+            //M index.html : ha sido modificado y no hay respaldo que se hayay echo que esta en rojo
+            //M  index.html :  el archivo ha sido modificado, verde y ha tomado nota de la modificacion que ha echo
+            //AM css/estilos.css , modificado este file A de color verde y M de rojo
+            // ejem no sale el nombre index.html , porque ahora mismo esta restaurado
+
+//ADD despues COMMIT
+git commit -m "Se agrega los cambios" //es un commit, caso que sale error ponemos el email y la contra despues agregamos otra vez el commit
+git commit -m "Comienzo del proyecto" //1 file changed, 13 insertions(+), va salir asi cuando se agrego correctamente el commit, es decir un respaldo 
+git commit -am "Parrafo y tamaño de fuente y css" //add y comit juatos a la vez
+
+*********** LISTADO DE COMMIT QUE HEMOS ECHO EN REPOSITORIO LOCAL DE GIT ************
+$ git log --oneline
+39d916b (HEAD -> master) Agregado titulo. Primer parrafo // 2do commit
+273c8c4 Comienzo del proyecto  // primer commit
+*********************  FIN *****************
+
+git reset --hard 39d916b// para restaurar el archivo al 1mer archivo o 2do comit, va depender 39d916b ó 273c8c4, en este caso restauramos el segundo commit
+//esto tambien se puede hacer por vs yendonos al tercer icono superior izquierda damos flecha en regresar DISCARD CHANGES, descartamos cambios que hayamos echo 
+HEAD is now at 39d916b Agregado titulo. Primer parrafo // cuando sale esto no hay error, una vez echo en vs, vamos en el tercer icono a la izquierda
+
+$ git reset --hard 273c8c4 // si damos reset a primer commit se nos va borrar el primer comit cuando damos ver con:
+*********
+$ git log --oneline
+273c8c4 (HEAD -> master) Comienzo del proyecto
+*********
+
+git config --global user.email yaguirreobregon@gmail.com
+git config --global user.name yosepyusen
+
+git branch -M main //para subir a la rama principal
+git remote add origin https://github.com/yosepyusen/curso-js.git  //la ruta donde alojamos nuestro proyecto
+git push -u origin main //para aser la sincronixaxion de local con remoto
+
+git pull --rebase origin main
+
+
+git remote set-url origin https://github.com/yosepyusen/curso-js-mircha.git  //para pasarf a otra carpeta 
+git remote --verbose // para ver en q carpeta esta 
+git remote -v //para ver en la cartepta que esta
+
+
+
+para clonar::
+ git clone https://github.com/yosepyusen/curso-js-mircha.git
+
+
+
+ ---GIT VERSION--
+ git -v // en cmd
+https://git-scm.com/docs 
+https://git-scm.com/docs/git#_git_commands 
+
+
+-----ERRORES---
+git commit -m "Agregado titulo. Primer parrafo" // no sale los siguientes errores porque primero tenemos que agregar el comando : git add nombre_archiv.txt
+on branch master //en rama maestra
+changes not staged for commit: // no has llevado al area de ensayo este archivo que has modificado para el commit
+//untracked files, archivos que no se han echo el seguimiento
+no changes added to commit // no se agrego cambios al commit 
