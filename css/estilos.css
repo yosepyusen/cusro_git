@@ -6,4 +6,6 @@
 
 body{
     background-color: rgb(36, 36, 129);
+    font-weight: bold;
+    color: red;
 }

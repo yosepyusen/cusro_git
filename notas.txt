@@ -13,12 +13,12 @@ git add index.html //agregamos el archivo con el nomre mas su extencion si html.
             //M index.html : ha sido modificado y no hay respaldo que se hayay echo que esta en rojo
             //M  index.html :  el archivo ha sido modificado, verde y ha tomado nota de la modificacion que ha echo
             //AM css/estilos.css , modificado este file A de color verde y M de rojo
-            // ejem no sale el nombre index.html , porque ahora mismo esta restaurado
+            // ejem no sale el nombre index.html , porque ahora mismo esta restaurado, y si no sale nada porque todo esta guardado
 
 //ADD despues COMMIT
 git commit -m "Se agrega los cambios" //es un commit, caso que sale error ponemos el email y la contra despues agregamos otra vez el commit
 git commit -m "Comienzo del proyecto" //1 file changed, 13 insertions(+), va salir asi cuando se agrego correctamente el commit, es decir un respaldo 
-git commit -am "Parrafo y tamaño de fuente y css" //add y comit juatos a la vez
+git commit -am "Parrafo y tamaño de fuente y css" //add y comit juatos a la vez, cuando es exitoso va salir como: create mode 100644 css/estilos.css : ...
 
 *********** LISTADO DE COMMIT QUE HEMOS ECHO EN REPOSITORIO LOCAL DE GIT ************
 $ git log --oneline
