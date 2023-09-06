@@ -24,7 +24,6 @@ git commit -am "Parrafo y tamaño de fuente y css" //add y comit juatos a la vez
 $ git log --oneline
 39d916b (HEAD -> master) Agregado titulo. Primer parrafo // 2do commit
 273c8c4 Comienzo del proyecto  // primer commit
-*********************  FIN *****************
 
 git reset --hard 39d916b// para restaurar el archivo al 1mer archivo o 2do comit, va depender 39d916b ó 273c8c4, en este caso restauramos el segundo commit
 //esto tambien se puede hacer por vs yendonos al tercer icono superior izquierda damos flecha en regresar DISCARD CHANGES, descartamos cambios que hayamos echo 
@@ -35,25 +34,37 @@ $ git reset --hard 273c8c4 // si damos reset a primer commit se nos va borrar el
 $ git log --oneline
 273c8c4 (HEAD -> master) Comienzo del proyecto
 *********
+*********************  FIN *****************
 
 git config --global user.email yaguirreobregon@gmail.com
 git config --global user.name yosepyusen
 
+//****************SUBIR CARPETA AL REPOSITORIO EXISTENTE, pero primero tienes que añadir a local despues con add , despues añadir al remoto 
+git remote add origin https://github.com/yosepyusen/curso-js.git  //la ruta donde alojamos nuestro proyecto, con esto ya subio el proyecto si no hubo error no sale nada
+//si te da error con la linea anterior y borra el efecto por completo del comando de linea anterior se hace con:
+git remote rm origin
+gir remote -v //si no hay nada o no sale nada esta yendo bien pero si sale va salir lo sig ejem:
+origin  https://github.com/yosepyusen/cusro_git.git (fetch)
+origin  https://github.com/yosepyusen/cusro_git.git (push)
+
 git branch -M main //para subir a la rama principal
-git remote add origin https://github.com/yosepyusen/curso-js.git  //la ruta donde alojamos nuestro proyecto
-git push -u origin main //para aser la sincronixaxion de local con remoto
+git push -u origin main //para aser la sincronizacion de local con remoto, tabm se puede escribir: 
+git push origin master //va salir una ventana de autorizacion y le damos sincronizar con navegador y abre una pestaña de autotizacion en dicho navegador y LISTO, esto va salir cuando cambiamos la rama sino usamos por defecto que es main
+//en git ver permisos accedidos: Configuracion /Integrations /Applications/Authorized OAuth Apps
+//****************
+
+------------ video 4---------
+//puedes editar estos archivo subidos en remoto con github cuando ves tu proyecto y quieres cambiar y estos cambios puedes sincronizar con local
+  
 
 git pull --rebase origin main
-
 
 git remote set-url origin https://github.com/yosepyusen/curso-js-mircha.git  //para pasarf a otra carpeta 
 git remote --verbose // para ver en q carpeta esta 
 git remote -v //para ver en la cartepta que esta
 
-
-
-para clonar::
- git clone https://github.com/yosepyusen/curso-js-mircha.git
+//para clonar::
+git clone https://github.com/yosepyusen/curso-js-mircha.git
 
 
 
@@ -69,3 +80,26 @@ on branch master //en rama maestra
 changes not staged for commit: // no has llevado al area de ensayo este archivo que has modificado para el commit
 //untracked files, archivos que no se han echo el seguimiento
 no changes added to commit // no se agrego cambios al commit 
+
+error: remote origin already exists. //es cuando ya existe dicha ruta ejem: $ git remote add origin https://github.com/yosepyusen/cusro_git.git
+
+me salio error al subir files al repo, primero es init, add, commit, despues gir remote add origin URL, despues branch y dos veces PUSH ahi todavia me dio en una carpeta PRIVADA
+
+-------MAUNAL GIT------
+…or create a new repository on the command line //NUEVO REPOSITORIO
+
+echo "# cusro_git" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/yosepyusen/cusro_git.git
+git push -u origin main
+
+…or push an existing repository from the command line
+
+git remote add origin https://github.com/yosepyusen/cusro_git.git
+git branch -M main
+git push -u origin main
+
+or import code from another repository
