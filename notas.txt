@@ -49,8 +49,9 @@ origin  https://github.com/yosepyusen/cusro_git.git (push)
 
 git branch -M main //para subir a la rama principal
 git push -u origin main //para aser la sincronizacion de local con remoto, tabm se puede escribir: 
+
 git push origin master //va salir una ventana de autorizacion y le damos sincronizar con navegador y abre una pestaña de autotizacion en dicho navegador y LISTO, esto va salir cuando cambiamos la rama sino usamos por defecto que es main
-//en git ver permisos accedidos: Configuracion /Integrations /Applications/Authorized OAuth Apps
+                    //en git ver permisos accedidos: Configuracion /Integrations /Applications/Authorized OAuth Apps
 //****************
 
 ------------ video 4---------
@@ -71,14 +72,33 @@ git push --tag// para subir el tag en remoto y al ejecutar aparecera un tag en e
 * [new tag]         06-09-2023version1.0 -> 06-09-2023version1.0 
 //dicho tag en remoto ofrece descargar en ZIP: bajo windows y Ttar.gz: PARA LINUX
 
+//CLONAR DESDE REMOTO A LOCAL::
+git clone https://github.com/yosepyusen/cusro_git.git//clonando un proyecto desde una carpeta seleccionada o donde se quiere clonar, para ello abrimos desde dicha carpeta git bash here, usar siempre el https
+//antes de clonar fijar bien la carpeta 
+
+---------- CLASE RAMAS -------------------
+//lineas de tiempo son ramas o branch y todo en la linea de tiempo cuando finaliza el proyecto incluido todos los comits que hemos echo se le da nombre: MASTER, que es por defecto o se puede cambiar el nombre
+//tambien se puede crear varias ramas paralelas o lineas de tiempo paralelas, seria 2 filas con sus respectivo comit, esto se suele hacer para hacer pruebas en el proyecto complejo y no tener que regresar hacia atras despues de hacer dicha prueba esto es algo comun
+//puedes volver a un comit anterior o dos comits anteriores para que cuando la cosa no te convence, suele pasar en proyectos complejos
+//trabajar con ramas master min con una y adicionalmente puedes crear otras ramas paralelas y trabajar en el original= rama master y la copia = otra rama creada adicionalmente, esto se hace con fin de que otra persona trabaje solo en la rama copia o hacer pruebas
+//se puede trabajar en las dos ramas a la vez tanto como principal y la copia, hacer tb, comits, ya que cuando haces pruebas en rama copia, directamente puedes eliminar dicha rama copia y rama master no se ha visto alterado
+//puedes trabajar con una tercera rama adicional y al añadir mas ramas mas complejo se vuelve
+//ahora si tu en la rama copia esta yendo bien entonces pueden unir con la rama principal, es unir las copias tanto como principal 
+//debemos modificar archivos diferentes en cada rama NO SUELE HABER ERRORES, ejem: un inde.html modificas en linea 35 de la rama principal y los mismo modificas de la rama 2ria esa misma linea y ese archivo, ahi es donde sale el CONFILCTO, 
+//cual vas agrear a la hora de hacer un merch
+
+63bb29f (HEAD -> main, tag: 07-09-2023version1.1, origin/main, origin/HEAD) cambios notas.txt 4.1 //cuando sale en git es que estamos en rama main por defecto
+git branch javascript // crear una rama con nombre:javascript , sino sale nada por que esta bien, y sale lo sig: 
+63bb29f (HEAD -> main, tag: 07-09-2023version1.1, origin/main, origin/HEAD, javascript) cambios notas.txt 4.1
+git branch //ver ramas del pryecto, en este caso tenemos dos ramas uno de main y otro de acabamos de crear javascript
+* main     // quiere decir que estamos trabajando en rama main
+git checkout javascript // para movernos en esta rama
+
+
 git pull --rebase origin main
 
 git remote set-url origin https://github.com/yosepyusen/curso-js-mircha.git  //para pasarf a otra carpeta 
 git remote --verbose // para ver en q carpeta esta 
-git remote -v //para ver en la cartepta que esta
-
-//para clonar::
-git clone https://github.com/yosepyusen/curso-js-mircha.git
 
 
 
