@@ -59,6 +59,18 @@ git push origin master //va salir una ventana de autorizacion y le damos sincron
 //para sincronizar desde vs solo damos en tercer icono superior izquierdo y debe aparecer: Sync Changes, demos click en eso y se nos sincroniza
 //una vez echo los cambios en github para sincronizar con local usamos PULL y no PUSH
 
+git pull //para sincronizar cambios desde que se ha echo de remoto a local, cuando sale bien sale lo sig:
+index.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+$ git tag 06-09-2023version1.0 -m "version 1 del proyecto" // decir que el proyecto esta acabado, o de momento tiene la version 1.0 por decirlo y que pueda descargar del repositorio tanto como el grupo o otro usuarios
+//tag son etiquetas , si ejecutado el comando anterior sale bien va salir lo sig:
+$ git log --oneline
+10d89b2 (HEAD -> main, tag: 06-09-2023version1.0, origin/main) cambios en index.html //dicho tag esta en local
+git push --tag// para subir el tag en remoto y al ejecutar aparecera un tag en en remoto con nombre: 06-09-2023version1.0, si sale bien pa decir...
+* [new tag]         06-09-2023version1.0 -> 06-09-2023version1.0 
+//dicho tag en remoto ofrece descargar en ZIP: bajo windows y Ttar.gz: PARA LINUX
+
 git pull --rebase origin main
 
 git remote set-url origin https://github.com/yosepyusen/curso-js-mircha.git  //para pasarf a otra carpeta 
