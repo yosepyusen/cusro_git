@@ -56,6 +56,7 @@ git push origin master //va salir una ventana de autorizacion y le damos sincron
 ------------ video 4---------
 //puedes editar estos archivo subidos en remoto con github cuando ves tu proyecto y quieres cambiar y estos cambios puedes sincronizar con local
 //despues de editar demos en : commit changes, despues añadir un comit en: Extended description, y dejar seleccionado por defecto :Commit directly to the main branch
+//para sincronizar desde vs solo damos en tercer icono superior izquierdo y debe aparecer: Sync Changes, demos click en eso y se nos sincroniza
 //una vez echo los cambios en github para sincronizar con local usamos PULL y no PUSH
 
 git pull --rebase origin main
