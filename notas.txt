@@ -93,6 +93,10 @@ git branch javascript // crear una rama con nombre:javascript , sino sale nada p
 git branch //ver ramas del pryecto, en este caso tenemos dos ramas uno de main y otro de acabamos de crear javascript
 * main     // quiere decir que estamos trabajando en rama main
 git checkout javascript // para movernos en esta rama
+//va salir en sig linea que estamos trabajando en rama javascript y los cambios que se han echo
+$ git log --oneline
+a468481 (HEAD -> javascript) Saludo js agregado
+
 
 
 git pull --rebase origin main
