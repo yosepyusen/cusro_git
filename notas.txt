@@ -86,6 +86,7 @@ error: remote origin already exists. //es cuando ya existe dicha ruta ejem: $ gi
 
 me salio error al subir files al repo, primero es init, add, commit, despues gir remote add origin URL, despues branch y dos veces PUSH ahi todavia me dio en una carpeta PRIVADA
 
+
 -------MAUNAL GIT------
 …or create a new repository on the command line //NUEVO REPOSITORIO
 
