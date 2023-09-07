@@ -43,7 +43,7 @@ git config --global user.name yosepyusen
 git remote add origin https://github.com/yosepyusen/curso-js.git  //la ruta donde alojamos nuestro proyecto, con esto ya subio el proyecto si no hubo error no sale nada
 //si te da error con la linea anterior y borra el efecto por completo del comando de linea anterior se hace con:
 git remote rm origin
-gir remote -v //si no hay nada o no sale nada esta yendo bien pero si sale va salir lo sig ejem:
+git remote -v //si no hay nada o no sale nada esta yendo bien pero si sale va salir lo sig ejem:
 origin  https://github.com/yosepyusen/cusro_git.git (fetch)
 origin  https://github.com/yosepyusen/cusro_git.git (push)
 
